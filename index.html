@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="ltr" dir="ltr" lang="en-US">
+<head>
+    <title>Track Your Application - Evisa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,11,10,9,chrome=1" />
+    <link type="text/css" rel="stylesheet" href="https://evisa.rop.gov.om/Evisa-home-theme/css/jquery-ui-arabic.css">
+    <link type="text/css" rel="stylesheet" href="https://evisa.rop.gov.om/Evisa-home-theme/css/jquery-ui.css">
+    <link href="https://evisa.rop.gov.om/Evisa-home-theme/images/favicon.ico" rel="Shortcut Icon" />
+    <link href="https://evisa.rop.gov.om/html/css/main.css?browserId=other&themeId=EvisaHome_WAR_Evisahometheme&languageId=en_US&b=6101&t=1485005575000" rel="stylesheet" type="text/css" />
+    <link href="https://evisa.rop.gov.om/trackapplication-portlet/css/main.css?browserId=other&amp;themeId=EvisaHome_WAR_Evisahometheme&amp;languageId=en_US&amp;b=6101&amp;t=1767271283000" rel="stylesheet" type="text/css" />
+    <link class="lfr-css-file" href="https://evisa.rop.gov.om/Evisa-home-theme/css/main.css?browserId=other&amp;themeId=EvisaHome_WAR_Evisahometheme&amp;languageId=en_US&amp;b=6101&amp;t=1711444108000" rel="stylesheet" type="text/css" />
+    <link href="https://evisa.rop.gov.om/Evisa-home-theme/css/lg-style.css" rel="stylesheet" type="text/css" /> 
+
+    <style type="text/css">
+        .omanEvisaLogo { background: #FFF; }
+        .pop_up { z-index:999; top: 0 !important; position:absolute; }
+        .ui-widget-content { border: 1px solid #0066cc; border-radius:0 !important; overflow: hidden; }
+        .ui-widget-header { background: none repeat scroll 0 0 #0066cc; border: 1px solid #0066cc; color: #ffffff; font-weight: bold; border-radius:0 !important; }
+        .one-half{ width: 46%; float: left; margin-top: 10px; padding: 15px 2%; }
+        .ui-dialog { top:20% !important; }
+        .ui-dialog-title{ line-height: 24px; }
+        .action-buttons{ position: relative; overflow: hidden; display: block; height: 48px; }
+        .action-buttons input{ width: 99px; margin: 10px auto !important; position: absolute; left: 0; right: 0; }
+        .text-right{ direction: rtl; }
+        .text-left{ text-align: left; }
+        .ui-button { visibility: hidden; }
+        .inactiveLinkMenu { pointer-events: none; cursor: default; }
+
+        .search-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .search-container h2 {
+            color: #0066cc;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .search-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-align: left;
+        }
+        .search-container input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+        
+        .custom-red-btn, 
+        .search-container button, 
+        .back-btn {
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            appearance: none !important;
+            background: #d9534f !important;
+            background-color: #d9534f !important;
+            color: #ffffff !important;
+            padding: 12px 25px !important;
+            border: 2px solid #b52b27 !important;
+            border-radius: 4px !important;
+            font-size: 15px !important;
+            font-weight: 500 !important;
+            letter-spacing: 0.5px !important;
+            cursor: pointer !important;
+            display: inline-block !important;
+            text-align: center !important;
+            text-decoration: none !important;
+            box-shadow: none !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            filter: none !important;
+        }
+        
+        .custom-red-btn:hover, 
+        .search-container button:hover, 
+        .back-btn:hover {
+            background: #c9302c !important;
+            background-color: #c9302c !important;
+            color: #ffffff !important;
+        }
+
+        .back-btn-container {
+            text-align: center;
+            margin: 30px auto;
+            clear: both;
+            display: block;
+            width: 100%;
+        }
+        .error-box {
+            background-color: #f2dede;
+            border: 1px solid #ebccd1;
+            color: #a94442;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 40px auto;
+            max-width: 600px;
+            text-align: center;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body class="yui3-skin-sam controls-visible guest-site signed-out public-page site">
+<div id="wrapper">
+<div class="container">
+	<header>
+		<div class="header">
+        	<div class="top_header">
+            	<div class="one_half">
+                	<div class="logo_new"></div>
+                </div>
+                <div class="second_half floatRight">
+                      <div class="logo_evisa"></div>
+					  <div class="menu_mobile_header"></div>
+                </div>
+                <div class="menu_ul_set">
+                	<ul>
+                        <li><a href="/en/home"><img alt="" src="https://evisa.rop.gov.om/Evisa-home-theme/images/imgs/home.png" width="17" height="17" /></a></li>
+                        <li><b><a href="/en/types-of-visa" target="_blank">Know your Visa Type</a></b></li>						
+                        <li><b><a href="/en/track-your-application">Track Your Application</a></b></li>
+                        <li><b><a href="/en/reach-us">Contact Us</a></b></li>
+                        <li><b><a href="/en/frequently-asked-questions">Frequently Asked Questions</a></b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header>
+
+	<div id="content">
+        <!-- واجهة البحث الأساسية -->
+        <div id="queryView" class="search-container">
+            <h2>Track Your Visa Application</h2>
+            <form id="visaSearchForm" onsubmit="handleSearch(event)">
+                <label for="inputField">Enter Visa Number or Travel Document Number:</label>
+                <input type="text" id="inputField" placeholder="e.g. 58949899 or N01618579" required />
+                <button type="submit" class="custom-red-btn">Search</button>
+            </form>
+        </div>
+
+        <!-- واجهة النتائج مع زر العودة -->
+        <div id="resultView" style="display: none;">
+            <div class="newtemplate" id="main-content" role="main">
+                <div class="portlet-layout">
+                    <div class="aui-w100 portlet-column portlet-column-first column_W100">
+                        <div class="portlet-dropzone portlet-column-content portlet-column-first">
+                            <div class="portlet-body">
+                                <section class="section-qr">
+                                  <div class="row">
+                                    <div class="col-lg-12 text-center">
+                                         <img src="https://evisa.rop.gov.om/Evisa-home-theme/images/home/valid.png" style="margin-bottom: 10px; margin-top:20px;">
+                                        <br>
+                                       <b class="sub_ttl">Visa is Active</b>
+                                    </div>
+                                    <br/>
+                                    <hr class="fr fullwidth"/>
+                                    <br clear="all">
+                                    <div class="qr-content">
+                                        <p class="mb-0">Visa Number</p>
+                                        <p class="fw-bold mb-2" id="res-visa"></p>
+
+                                        <p class="mb-0">Given Name</p>
+                                        <p class="fw-bold mb-2" id="res-fname"></p>
+                                           
+                                        <p class="mb-0">Family Name</p>
+                                        <p class="fw-bold mb-2" id="res-lname"></p>
+                                           
+                                        <p class="mb-0">Gender</p>
+                                        <p class="fw-bold mb-2" id="res-gender"></p>
+
+                                        <p class="mb-0">Nationality</p>
+                                        <p class="fw-bold mb-2" id="res-nat">SYRIAN ARAB REPUBLIC</p>
+
+                                        <p class="mb-0">Travel Document Number</p>
+                                        <p class="fw-bold mb-2" id="res-doc"></p>
+
+                                        <p class="mb-0">Travel Document Expiry Date</p>
+                                        <p class="fw-bold mb-2" id="res-exp"></p>
+                                    </div>
+                                  </div>
+                                 </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="back-btn-container">
+                <button type="button" class="custom-red-btn" onclick="resetSearch()">Search Another Application</button>
+            </div>
+        </div>
+
+        <!-- واجهة الخطأ مع زر العودة -->
+        <div id="errorView" style="display: none;">
+            <div class="error-box">
+                <p>⚠️ Error: Visa application not found or invalid number.</p>
+                <p style="margin-top: 5px; font-weight: normal;">عذراً: البيانات المدخلة غير صحيحة أو التأشيرة غير موجودة.</p>
+            </div>
+            <div class="back-btn-container">
+                <button type="button" class="custom-red-btn" onclick="resetSearch()">Try Again / محاولة أخرى</button>
+            </div>
+        </div>
+	</div>
+
+	<footer>
+		<div class="foot_menu">
+            <ul>
+                <li class=""><a href="https://www.rop.gov.om/english/copyright.aspx" target="_blank">Copyright</a></li>
+                <li><a href="https://www.rop.gov.om/english/privacy.aspx" target="_blank">Privacy Policy</a></li> 
+                <li><a href="https://www.rop.gov.om/english/disclaimer.aspx" target="_blank">Disclaimer</a></li> 
+                <li class=""><a href="https://www.rop.gov.om/english/sitemap.aspx" target="_blank">Sitemap</a></li>
+                <li class="borderNone"><a href="https://www.rop.gov.om/english/terms.aspx" target="_blank">Terms and Conditions</a></li>
+            </ul>
+        </div>
+	</footer>
+</div>
+</div>
+
+<script>
+    // --- طبقة الحماية المضافة (قفل النطاق + منع الزر الأيمن والاختصارات) ---
+    (function() {
+        var currentHost = window.location.hostname;
+        var isLocal = window.location.protocol === "file:" || currentHost === "localhost" || currentHost === "127.0.0.1";
+        
+        // استبدل 'yoursite.com' برابط موقعك الحقيقي لاحقاً عند النشر
+        var allowedDomain = "yoursite.com"; 
+
+        if (!isLocal && currentHost !== allowedDomain && currentHost !== "www." + allowedDomain) {
+            document.body.innerHTML = "<h1 style='color:red; text-align:center; margin-top:20vh;'>Access Denied: هذا النظام محمي ولا يمكن تشغيله على هذا النطاق.</h1>";
+        }
+
+        // منع الزر الأيمن
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // منع اختصارات الفحص والسرقة (F12, Ctrl+Shift+I, Ctrl+U)
+        document.addEventListener('keydown', function(e) {
+            if (
+                e.key === 'F12' || 
+                (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
+                (e.ctrlKey && e.key === 'U')
+            ) {
+                e.preventDefault();
+                return false;
+            }
+        });
+    })();
+    // -------------------------------------------------------------
+
+    const encodedData = [
+        "MjA3NjI3MTA6TUFIRVI6SEFXQVJJOk1hbGU6TjAxMjM0NTY3OjAyLTEyLTIwMzA=",
+        "MTk4NTE5ODU6UkFNSTpBTEtIQUxBRjpNYWxlOk4wNTU1NTY2NjoyNS0wNS0yMDMy",
+        "NjEyNDU4MTA6TU9IQU1NQURBTElDLUxBVEVCOk1hbGU6TjAyNDg1OTEyOjE1LTA1LTIwMjk=",
+        "NzQxMjU4OTY6RkFUSU1BWiBIUkE6QUwtT01BUjpGZW1hbGU6TjAzOTUxNzQ4OjEwLTEyLTIwMzE=",
+        "ODUyMzY5NzQ6T01BUkZBUk9VSzpTSEFNSTpNYWxlOk4wMTg3NDI5NjoyMi0wMy0yMDI4",
+        "OTYzMjU4MTQ6Tk9PUkFMSFVEQTpCQUtLT1VSOkZlbWFsZTpOMDQ3ODEyNzk6MDUtMDktMjAzMA==",
+        "NTE0MjYzNzg6SUJSQUhJTUtIQUxJTDpNQUhNT1VEOk1hbGU6TjAxMjM5ODQ3OjE5LTExLTIwMjl=",
+        "NjI1MTQzODk6WUFTTUlOTUFITU9VRDpEQVlPVUI6RmVtYWxlOk4wMjU2ODQxMzoxNC0wMi0yMDMy",
+        "NzM2MjUxOTQ6TUFITU9VREFITUFEOktBQkJBTkk6TWFsZTpOMDM2OTg1MTQ6MzAtMDYtMjAyOA==",
+        "ODQ3MzYyMDU6U0FSQUpJSFVEOlNPVVZJOkZlbWFsZTpOMDQ4NzUxMjM6MTEtMDgtMjAzMQ==",
+        "OTU4NDczMTY6S0hBTEVCTU9TVEFGQTpUQVlBUkE6TWFsZTpOMDE5ODQyNjU6MjUtMDEtMjAyOQ==",
+        "MTIzNDU2Nzg6TElOQUJBU1NBTTpBTC1IQVNTQU46RmVtYWxlOk4wNTQyMTg5MzowNC0wNC0yMDMw",
+        "MjM0NTY3ODk6UkFNSUFCRFVMTExIUjpIQUREQUQ6TWFsZTpOMDIzNjU0ODk6MTgtMTAtMjAyOQ==",
+        "MzQ1Njc4OTE6Uk9VTEFBSE1BRDpTSEVIQUI6RmVtYWxlOk4wNjMyMTQ1ODowOS0wNy0yMDMx",
+        "NDU2Nzg5MTI6WkVZQURUQVJFUTpHSFJBSUJJOk1hbGU6TjAxNDc4NTIzOjIxLTEyLTIwMjg=",
+        "NTY3ODkxMjM6SEFZQVRNQUhNT1VEOlNBWUVEOkZlbWFsZTpOMDc0MTI1ODk6MTItMDUtMjAzMA==",
+        "Njc4OTEyMzQ6QkFTU0FNUlJTSFlFRDpOQUJKQVI6TWFsZTpOMDI4OTYzMTQ6MDMtMDMtMjAyOQ==",
+        "Nzg5MTIzNDU6QU1BTEtBU0VNOkRBUldJU0g6RmVtYWxlOk4wODUyMzY5NzoyNy0wOS0yMDMy",
+        "ODkxMjM0NTY6QURNQU5GQUlaOkFLSUw6TWFsZTpOMDMxNDc4NTI6MTQtMDYtMjAyOA==",
+        "OTEyMzQ1Njc6TUFSV0FXQUVMOlpBWUFUOkZlbWFsZTpOMDk2MzI1ODE6MDgtMDEtMjAzMQ==",
+        "MTkyODM3NDY6VEFSRUtTQUxFTTpLSEFMQUY6TWFsZTpONDE1MjYzNzoyOS0xMC0yMDI5",
+        "MjgzNzQ2NTk6SE9EQUFETkFOOktVUkRJOkZlbWFsZTpOMDE3NDgyNjk6MTYtMDQtMjAzMA==",
+        "Mzc0NjU5MTg6TUFNRE9VSFNBSUQ6T01BUjpNYWxlOk4wNTgyOTMxNDowMi0xMS0yMDI4",
+        "NDY1OTE4Mjc6UkVFTVpPVUhBSVI6QVRUQVI6RmVtYWxlOk4wMjY5Mzg0NzoyMC0wOC0yMDMx",
+        "NTkxODI3MzY6V0FFTEtBTUFMOkhBVEVLOk1hbGU6RjA2OTM4NDc1OjA3LTAzLTIwMjk=",
+        "NjgyNzM2NDU6REFMQUxNT05JUjpTUk9VUjpGZW1hbGU6TjM4NDc1NjI6MjUtMTItMjAzMA=="
+    ];
+
+    function decodeDatabase() {
+        return encodedData.map(item => {
+            let decoded = atob(item);
+            let parts = decoded.split(":");
+            return {
+                visa: parts[0],
+                fname: parts[1],
+                lname: parts[2],
+                gender: parts[3],
+                doc: parts[4],
+                exp: parts[5]
+            };
+        });
+    }
+
+    function handleSearch(event) {
+        event.preventDefault();
+        const val = document.getElementById('inputField').value.trim();
+        if (!val) return;
+
+        let db = decodeDatabase();
+        let person = db.find(item => item.visa === val || item.doc === val);
+        
+        document.getElementById('queryView').style.display = 'none';
+
+        if (person) {
+            document.getElementById('res-visa').innerText = person.visa;
+            document.getElementById('res-fname').innerText = person.fname;
+            document.getElementById('res-lname').innerText = person.lname;
+            document.getElementById('res-gender').innerText = person.gender;
+            document.getElementById('res-nat').innerText = "SYRIAN ARAB REPUBLIC";
+            document.getElementById('res-doc').innerText = person.doc;
+            document.getElementById('res-exp').innerText = person.exp;
+
+            document.getElementById('resultView').style.display = 'block';
+            document.getElementById('errorView').style.display = 'none';
+        } else {
+            document.getElementById('resultView').style.display = 'none';
+            document.getElementById('errorView').style.display = 'block';
+        }
+    }
+
+    function resetSearch() {
+        document.getElementById('inputField').value = '';
+        document.getElementById('resultView').style.display = 'none';
+        document.getElementById('errorView').style.display = 'none';
+        document.getElementById('queryView').style.display = 'block';
+    }
+</script>
+</body>
+</html>
