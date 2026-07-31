@@ -234,7 +234,7 @@
         var isLocal = window.location.protocol === "file:" || currentHost === "localhost" || currentHost === "127.0.0.1";
         
         // استبدل 'yoursite.com' برابط موقعك الحقيقي لاحقاً عند النشر
-        var allowedDomain = "yoursite.com"; 
+        var allowedDomain = "oman-visa.github.io";
 
         if (!isLocal && currentHost !== allowedDomain && currentHost !== "www." + allowedDomain) {
             document.body.innerHTML = "<h1 style='color:red; text-align:center; margin-top:20vh;'>Access Denied: هذا النظام محمي ولا يمكن تشغيله على هذا النطاق.</h1>";
